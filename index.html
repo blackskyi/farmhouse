@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Properties - Quality Student Housing</title>
+    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="new-design">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">OG PROPERTIES</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="availability.html">AVAILABILITY</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="residents.html">RESIDENTS</a></li>
+                    <li><a href="owners.html">OWNERS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <section class="hero-section" id="heroSection">
+        <div class="hero-slides">
+            <!-- Slide 1 - USC Campus Building -->
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80')"></div>
+            <!-- Slide 2 - College Football Game -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=1920&q=80')"></div>
+            <!-- Slide 3 - USC Students Celebrating -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1920&q=80')"></div>
+            <!-- Slide 4 - Basketball Game -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1519861531473-9200262188bf?w=1920&q=80')"></div>
+            <!-- Slide 5 - Diwali at Campus -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1605367794172-754e0e4e4c43?w=1920&q=80')"></div>
+            <!-- Slide 6 - Campus Student Life -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80')"></div>
+            <!-- Slide 7 - Holi Festival Celebration -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1583225214464-9a52bf6f89d6?w=1920&q=80')"></div>
+            <!-- Slide 8 - LA Coliseum -->
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1920&q=80')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">WELCOME TO OG PROPERTIES</h1>
+            <p class="hero-subtitle">Quality Student Housing Near Campus</p>
+
+            <!-- Search Form -->
+            <div class="search-form-container">
+                <form class="property-search-form" id="heroSearchForm">
+                    <div class="search-field">
+                        <label>City</label>
+                        <input type="text" placeholder="Enter city" id="searchCity" value="">
+                    </div>
+                    <div class="search-field">
+                        <label>Price</label>
+                        <select id="searchPrice">
+                            <option value="">Any Price</option>
+                            <option value="700">Under $700</option>
+                            <option value="1000">Under $1000</option>
+                            <option value="1200">Under $1200</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Beds</label>
+                        <select id="searchBeds">
+                            <option value="">Any</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="5">5 Rooms</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Baths</label>
+                        <select id="searchBaths">
+                            <option value="">Any</option>
+                            <option value="2">2 Baths</option>
+                            <option value="3">3 Baths</option>
+                        </select>
+                    </div>
+                    <button type="button" class="search-btn" onclick="performSearch()">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portal Cards Section -->
+    <section class="portals-section">
+        <div class="container">
+            <div class="portal-cards-grid">
+                <!-- Availability Card -->
+                <a href="availability.html" class="portal-card" style="background-image: linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url('https://images.unsplash.com/photo-1605367794172-754e0e4e4c43?w=600&q=80'); background-size: cover; background-position: center;">
+                    <div class="portal-icon icon-blue"><i class="fas fa-home"></i></div>
+                    <h3>Availability</h3>
+                    <p>Browse our current available properties and find your perfect home</p>
+                    <span class="portal-link-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Tenant Portal Card -->
+                <a href="tenant-login.html" class="portal-card" style="background-image: linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url('https://images.unsplash.com/photo-1583225214464-9a52bf6f89d6?w=600&q=80'); background-size: cover; background-position: center;">
+                    <div class="portal-icon icon-red"><i class="fas fa-user"></i></div>
+                    <h3>Tenant Portal</h3>
+                    <p>Pay rent, submit maintenance requests, and manage your account</p>
+                    <span class="portal-link-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Owner Portal Card -->
+                <a href="owner-login.html" class="portal-card" style="background-image: linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url('https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600&q=80'); background-size: cover; background-position: center;">
+                    <div class="portal-icon icon-green"><i class="fas fa-key"></i></div>
+                    <h3>Owner Portal</h3>
+                    <p>Manage your properties, view reports, and track payments</p>
+                    <span class="portal-link-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Contact Card -->
+                <a href="contact.html" class="portal-card" style="background-image: linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url('https://images.unsplash.com/photo-1606638273986-2edd56a1a50c?w=600&q=80'); background-size: cover; background-position: center;">
+                    <div class="portal-icon icon-yellow"><i class="fas fa-phone"></i></div>
+                    <h3>Contact Us</h3>
+                    <p>Get in touch with our team for questions or assistance</p>
+                    <span class="portal-link-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Our Management Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon icon-blue"><i class="fas fa-building"></i></div>
+                    <h3>Property Management</h3>
+                    <p>Full-service property management for residential rentals</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon icon-red"><i class="fas fa-tools"></i></div>
+                    <h3>Maintenance</h3>
+                    <p>24/7 maintenance support for all our properties</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon icon-yellow"><i class="fas fa-credit-card"></i></div>
+                    <h3>Rent Collection</h3>
+                    <p>Secure online rent payment processing</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon icon-green"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Tenant Screening</h3>
+                    <p>Thorough background and credit checks</p>
+                </div>
+            </div>
+            <div class="services-cta">
+                <a href="services.html" class="btn-primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newest Listings Section -->
+    <section class="newest-listings">
+        <div class="container">
+            <h2 class="section-title">Newest Listings</h2>
+            <div class="properties-grid" id="newestListingsContainer">
+                <!-- Properties will be dynamically loaded here -->
+            </div>
+            <div class="view-all-cta">
+                <a href="availability.html" class="btn-secondary">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <h4>OG PROPERTIES</h4>
+                    <p>Quality student housing near campus. Providing comfortable, affordable, and convenient living spaces for students.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="availability.html">Availability</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Portals -->
+                <div class="footer-column">
+                    <h4>Portals</h4>
+                    <ul class="footer-links">
+                        <li><a href="tenant-login.html">Tenant Portal</a></li>
+                        <li><a href="owner-login.html">Owner Portal</a></li>
+                        <li><a href="pay-rent.html">Pay Rent Online</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Near Campus</li>
+                        <li><i class="fas fa-envelope"></i> support@og-rooms.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 OG Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Property data
+        const allProperties = [
+            {
+                id: 'property-1',
+                owner: 'Sara',
+                title: 'Spacious 3B2B Near Campus',
+                description: 'Huge room with attached bath in a spacious house. One block away from campus!',
+                sharedRent: 600,
+                privateRent: 1150,
+                rooms: 3,
+                baths: 2,
+                availableRooms: 3,
+                availableFrom: 'Mid December',
+                features: ['Free Laundry', 'Parking', 'Backyard', '1 Block from Campus'],
+                link: 'property-1.html',
+                city: 'Campus Area',
+                image: 'assets/images/property-1/room-1.jpg'
+            },
+            {
+                id: 'property-2',
+                owner: 'Sara',
+                title: 'Spacious 5B3B Near Campus',
+                description: 'Huge rooms with attached baths in a spacious house. Air-conditioned rooms, one block from campus!',
+                sharedRent: 600,
+                privateRent: 1150,
+                rooms: 5,
+                baths: 3,
+                availableRooms: 2,
+                availableFrom: 'Mid December',
+                features: ['Air-Conditioned', 'Free Laundry', 'Parking', 'Backyard with Gazebo'],
+                link: 'property-2.html',
+                city: 'Campus Area',
+                image: 'assets/images/property-2/house-front/1.jpg'
+            }
+        ];
+
+        // Render newest listings
+        function renderNewestListings() {
+            const container = document.getElementById('newestListingsContainer');
+            container.innerHTML = allProperties.map(prop => `
+                <div class="property-card-modern">
+                    <img src="${prop.image}" alt="${prop.title}" class="property-card-image">
+                    <div class="property-card-content">
+                        <div class="property-header">
+                            <h3>${prop.title}</h3>
+                            <div class="property-badge">${prop.availableRooms} Available</div>
+                        </div>
+                        <p class="property-description">${prop.description}</p>
+                        <div class="property-stats">
+                            <div class="stat-item">
+                                <span class="stat-icon"><i class="fas fa-bed"></i></span>
+                                <span class="stat-text">${prop.rooms} Rooms</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon"><i class="fas fa-bath"></i></span>
+                                <span class="stat-text">${prop.baths} Baths</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon"><i class="fas fa-dollar-sign"></i></span>
+                                <span class="stat-text">From $${prop.sharedRent}/mo</span>
+                            </div>
+                        </div>
+                        <div class="property-features-list">
+                            ${prop.features.slice(0, 3).map(f => `<span class="feature-chip">${f}</span>`).join('')}
+                        </div>
+                        <div class="property-footer">
+                            <span class="available-date">Available: ${prop.availableFrom}</span>
+                            <a href="${prop.link}" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Search functionality
+        function performSearch() {
+            const city = document.getElementById('searchCity').value.toLowerCase();
+            const maxPrice = document.getElementById('searchPrice').value;
+            const beds = document.getElementById('searchBeds').value;
+            const baths = document.getElementById('searchBaths').value;
+
+            // Build query string
+            const params = new URLSearchParams();
+            if (city) params.append('city', city);
+            if (maxPrice) params.append('price', maxPrice);
+            if (beds) params.append('beds', beds);
+            if (baths) params.append('baths', baths);
+
+            // Redirect to availability page with search params
+            window.location.href = `availability.html${params.toString() ? '?' + params.toString() : ''}`;
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Initialize
+        renderNewestListings();
+
+        // Hero Carousel Functionality
+        function initHeroCarousel() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicatorsContainer = document.getElementById('carouselIndicators');
+            let currentSlide = 0;
+            const slideInterval = 5000; // 5 seconds per slide
+
+            // Create indicators
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('button');
+                indicator.classList.add('carousel-indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            const indicators = document.querySelectorAll('.carousel-indicator');
+
+            function goToSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                indicators[currentSlide].classList.remove('active');
+                currentSlide = n;
+                slides[currentSlide].classList.add('active');
+                indicators[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                let next = (currentSlide + 1) % slides.length;
+                goToSlide(next);
+            }
+
+            // Auto-advance slides
+            setInterval(nextSlide, slideInterval);
+        }
+
+        // Initialize carousel
+        initHeroCarousel();
+    </script>
+</body>
+</html>
