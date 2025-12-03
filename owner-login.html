@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Portal Login - OG Properties</title>
+    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="new-design">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">OG PROPERTIES</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="availability.html">AVAILABILITY</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="residents.html">RESIDENTS</a></li>
+                    <li><a href="owners.html" class="active">OWNERS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section style="background: linear-gradient(135deg, #EA4335 0%, #c5221f 100%); padding: 60px 20px; text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 10px; font-weight: 600;">Owner Portal</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Manage your properties and track performance</p>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <main class="container" style="padding: 60px 20px;">
+        <div style="max-width: 500px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                <h2 style="text-align: center; margin-bottom: 30px; color: var(--text-primary);">Property Owner Sign In</h2>
+
+                <div id="errorMessage" style="display: none; background: #fce8e6; color: var(--google-red); padding: 15px; border-radius: 6px; margin-bottom: 20px;"></div>
+
+                <form id="ownerLoginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div style="margin-bottom: 20px; text-align: right;">
+                        <a href="#" onclick="alert('Please contact support at support@og-rooms.com to reset your password'); return false;" style="color: black; text-decoration: none; font-size: 0.9rem;">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">Sign In</button>
+                </form>
+
+                <div style="margin-top: 30px; text-align: center; padding-top: 30px; border-top: 1px solid var(--border);">
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Want to list your properties?</p>
+                    <a href="owner-signup.html" class="btn-secondary">Become a Property Owner</a>
+                </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: var(--background-alt); border-radius: 6px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--text-primary);">Owner Portal Features:</h3>
+                    <ul style="color: var(--text-secondary); line-height: 1.8;">
+                        <li>View all your property listings</li>
+                        <li>Track rent payments and revenue</li>
+                        <li>Manage tenant applications</li>
+                        <li>Handle maintenance requests</li>
+                        <li>Update property information</li>
+                        <li>View analytics and reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>OG PROPERTIES</h4>
+                    <p>Quality student housing near campus. Providing comfortable, affordable, and convenient living spaces for students.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="availability.html">Availability</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Portals</h4>
+                    <ul class="footer-links">
+                        <li><a href="tenant-login.html">Tenant Portal</a></li>
+                        <li><a href="owner-login.html">Owner Portal</a></li>
+                        <li><a href="pay-rent.html">Pay Rent Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Near Campus</li>
+                        <li>📧 support@og-rooms.com</li>
+                        <li>🕐 Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OG Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Handle login
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const errorDiv = document.getElementById('errorMessage');
+            const form = document.getElementById('ownerLoginForm');
+            const submitBtn = form.querySelector('.btn-primary');
+
+            errorDiv.style.display = 'none';
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Show loading state
+            submitBtn.textContent = 'Logging in...';
+            submitBtn.disabled = true;
+
+            // Simulate login (MVP using localStorage)
+            // TODO: Replace with actual API authentication
+            setTimeout(() => {
+                // For MVP, check against hardcoded owners
+                const validOwners = {
+                    'support@og-rooms.com': {
+                        password: 'sara2025',
+                        id: 'sara-001',
+                        name: 'Sara'
+                    }
+                };
+
+                if (validOwners[email] && validOwners[email].password === password) {
+                    // Store session
+                    sessionStorage.setItem('ownerId', validOwners[email].id);
+                    sessionStorage.setItem('ownerName', validOwners[email].name);
+                    sessionStorage.setItem('ownerEmail', email);
+                    sessionStorage.setItem('ownerLoggedIn', 'true');
+
+                    // Redirect to dashboard
+                    window.location.href = 'owner-dashboard.html';
+                } else {
+                    errorDiv.textContent = 'Invalid email or password';
+                    errorDiv.style.display = 'block';
+                    submitBtn.textContent = 'Sign In';
+                    submitBtn.disabled = false;
+                }
+            }, 500);
+        }
+    </script>
+</body>
+</html>

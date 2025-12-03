@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacious 3B2B Near Campus - House for Rent</title>
+    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to All Properties</a>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h1>Spacious 3B2B Near Campus</h1>
+                    <p class="subtitle">Private room with attached bath</p>
+                </div>
+                <a href="pay-rent.html" style="background: linear-gradient(135deg, black 0%, #34a853 100%); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3); transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(66, 133, 244, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(66, 133, 244, 0.3)';">
+                    <i class="fas fa-credit-card"></i> Pay Rent
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Property Details -->
+        <section class="property-details">
+            <h2>Property Details</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="label">Shared Spot:</span>
+                    <span class="value">$600/month</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Private Room:</span>
+                    <span class="value">$1150/month</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Deposit:</span>
+                    <span class="value">Contact for details</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Available From:</span>
+                    <span class="value">Mid December</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Lease Term:</span>
+                    <span class="value">Flexible</span>
+                </div>
+            </div>
+
+            <div class="property-description-full">
+                <p>Huge room with attached bath in a spacious 3B2B house.</p>
+            </div>
+
+            <div class="amenities">
+                <h3>Features of the House</h3>
+                <ul>
+                    <li>Free In-house laundry</li>
+                    <li>Spacious common areas (Kitchen, living room)</li>
+                    <li>Backyard with a gazebo and bonfire space</li>
+                    <li>Parking for 3 cars</li>
+                    <li>Gated house with a yard with much greenery</li>
+                    <li>One block away from campus</li>
+                    <li>Usual amenities like stove, refrigerator, oven, microwave</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Room Availability -->
+        <section class="room-availability">
+            <h2>Room Availability</h2>
+            <p style="color: #5f6368; margin-bottom: 20px;">Shared Spot: $600/month | Private Room: $1150/month</p>
+            <div class="rooms-grid">
+                <div class="room-card available">
+                    <div class="room-status">Available</div>
+                    <h3>Room 1</h3>
+                    <p>Shared: $600 | Private: $1150</p>
+                </div>
+                <div class="room-card available">
+                    <div class="room-status">Available</div>
+                    <h3>Room 2</h3>
+                    <p>Shared: $600 | Private: $1150</p>
+                </div>
+                <div class="room-card available">
+                    <div class="room-status">Available</div>
+                    <h3>Room 3</h3>
+                    <p>Shared: $600 | Private: $1150</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid" id="photoGallery">
+                <div class="gallery-item">
+                    <img src="assets/images/property-1/room-1.jpg" alt="Room 1" onclick="openModal(this.src)">
+                    <p class="photo-caption">Room 1</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/property-1/room-2.jpg" alt="Room 2" onclick="openModal(this.src)">
+                    <p class="photo-caption">Room 2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section class="property-location">
+            <h2>Property Location</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">This property is conveniently located one block from campus.</p>
+            <div id="propertyMap" style="height: 400px; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 15px; font-style: italic;">
+                <i class="fas fa-info-circle"></i> Map shows approximate location. Exact address will be provided upon application approval.
+            </p>
+        </section>
+
+        <!-- Application Form -->
+        <section class="application-form">
+            <h2>Apply to View</h2>
+            <p>Interested in viewing this property? Fill out the form below and we'll send you the details.</p>
+
+            <form id="applicationForm">
+                <input type="hidden" id="propertyName" name="propertyName" value="Spacious 3B2B Near Campus">
+                <input type="hidden" id="propertyOwner" name="propertyOwner" value="Sara">
+                <input type="hidden" id="ownerEmail" name="ownerEmail" value="support@og-rooms.com">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="moveInDate">Desired Move-in Date *</label>
+                    <input type="date" id="moveInDate" name="moveInDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="occupants">Number of Occupants *</label>
+                    <input type="number" id="occupants" name="occupants" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="employment">Employment Status *</label>
+                    <select id="employment" name="employment" required>
+                        <option value="">Select...</option>
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="student">Student</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="income">Monthly Income *</label>
+                    <input type="text" id="income" name="income" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pets">Do you have pets?</label>
+                    <select id="pets" name="pets">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="petDetails">If yes, please specify:</label>
+                    <input type="text" id="petDetails" name="petDetails">
+                </div>
+
+                <div class="form-group">
+                    <label for="references">Previous Landlord Reference (Name & Contact)</label>
+                    <textarea id="references" name="references" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Your Availability for Property Viewing *</label>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 10px;">
+                        Please provide 2-3 dates and times when you're available to view the property.
+                        The owner will respond with a confirmed time.
+                    </p>
+                    <textarea id="availability" name="availability" rows="5"
+                              placeholder="Example:&#10;- Monday, Dec 18 between 2pm-5pm&#10;- Wednesday, Dec 20 anytime after 3pm&#10;- Friday, Dec 22 morning 10am-12pm"
+                              required></textarea>
+                </div>
+
+                <div class="form-group" style="background: #fff3cd; padding: 15px; border-radius: 4px; border-left: 4px solid #ffc107;">
+                    <p style="margin: 0; font-size: 0.95rem;">
+                        <strong>Important:</strong> All communications go through our platform.
+                        The property owner will contact you via the platform to confirm viewing times.
+                        This ensures your application is tracked and your security is protected.
+                    </p>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+
+            <div id="formMessage" class="form-message"></div>
+        </section>
+
+        <!-- Schedule Tour -->
+        <section class="schedule-tour">
+            <h2>Schedule a Tour</h2>
+            <p>Book a time to view the property in person.</p>
+            <div class="calendly-container">
+                <div class="calendly-inline-widget"
+                     data-url="https://calendly.com/gocoool94leo"
+                     style="min-width:320px;height:700px;">
+                </div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 House Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Map Initialization -->
+    <script>
+        // Load coordinates from admin settings (localStorage) or use defaults
+        const defaultLocation = { lat: 40.8075, lng: -73.9626, desc: "One block from campus" };
+        const savedLocation = JSON.parse(localStorage.getItem('property1Location')) || defaultLocation;
+
+        const propertyLat = savedLocation.lat;
+        const propertyLng = savedLocation.lng;
+        const propertyDesc = savedLocation.desc;
+        const propertyName = "Spacious 3B2B Near Campus";
+
+        // Initialize the map
+        const map = L.map('propertyMap').setView([propertyLat, propertyLng], 15);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add a marker for the property
+        const marker = L.marker([propertyLat, propertyLng]).addTo(map);
+
+        // Add popup to the marker
+        marker.bindPopup(`
+            <div style="text-align: center;">
+                <strong style="font-size: 1.1em;">${propertyName}</strong><br>
+                <span style="color: #666;">${propertyDesc}</span><br>
+                <a href="contact.html" style="color: var(--primary); text-decoration: none; margin-top: 5px; display: inline-block;">
+                    Contact for exact address
+                </a>
+            </div>
+        `).openPopup();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
