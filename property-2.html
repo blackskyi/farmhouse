@@ -71,6 +71,17 @@
             </div>
         </section>
 
+        <!-- House Tour Video -->
+        <section class="gallery">
+            <h2>House Tour Video</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/videos/property-2/property-tour.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
         <!-- Room Availability -->
         <section class="room-availability">
             <h2>Room Availability</h2>
@@ -101,17 +112,6 @@
                     <h3>Room 5</h3>
                     <p>Shared: $600 | Private: $1150</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- House Tour Video -->
-        <section class="gallery">
-            <h2>House Tour Video</h2>
-            <div class="video-container">
-                <video controls>
-                    <source src="assets/videos/property-2/house-tour.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
             </div>
         </section>
 
@@ -326,9 +326,7 @@
                         Please provide 2-3 dates and times when you're available to view the property.
                         The owner will respond with a confirmed time.
                     </p>
-                    <textarea id="availability" name="availability" rows="5"
-                              placeholder="Example:&#10;- Monday, Dec 18 between 2pm-5pm&#10;- Wednesday, Dec 20 anytime after 3pm&#10;- Friday, Dec 22 morning 10am-12pm"
-                              required></textarea>
+                    <textarea id="availability" name="availability" rows="5" placeholder="Example:&#10;- Monday, Dec 18 between 2pm-5pm&#10;- Wednesday, Dec 20 anytime after 3pm&#10;- Friday, Dec 22 morning 10am-12pm" required></textarea>
                 </div>
 
                 <div class="form-group" style="background: #fff3cd; padding: 15px; border-radius: 4px; border-left: 4px solid #ffc107;">
@@ -350,10 +348,7 @@
             <h2>Schedule a Tour</h2>
             <p>Book a time to view the property in person.</p>
             <div class="calendly-container">
-                <div class="calendly-inline-widget"
-                     data-url="https://calendly.com/gocoool94leo"
-                     style="min-width:320px;height:700px;">
-                </div>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/gocoool94leo" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </section>
@@ -368,7 +363,6 @@
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
     <!-- Map Initialization -->
     <script>
         // Load coordinates from admin settings (localStorage) or use defaults
