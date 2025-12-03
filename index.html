@@ -230,35 +230,21 @@
         // Property data
         const allProperties = [
             {
-                id: 'property-1',
-                owner: 'Sara',
-                title: 'Spacious 3B2B Near Campus',
-                description: 'Huge room with attached bath in a spacious house. One block away from campus!',
-                sharedRent: 600,
-                privateRent: 1150,
-                rooms: 3,
-                baths: 2,
-                availableRooms: 3,
-                availableFrom: 'Mid December',
-                features: ['Free Laundry', 'Parking', 'Backyard', '1 Block from Campus'],
-                link: 'property-1.html',
-                city: 'Campus Area',
-                image: 'assets/images/property-1/room-1.jpg'
             },
             {
                 id: 'property-2',
                 owner: 'Sara',
-                title: 'Spacious 5B3B Near Campus',
-                description: 'Huge rooms with attached baths in a spacious house. Air-conditioned rooms, one block from campus!',
-                sharedRent: 600,
-                privateRent: 1150,
-                rooms: 5,
+                title: 'Guest Houses Near Nagarhole',
+                description: 'Guest houses near Nagarhole',
+                startingRent: 1200,
+                
+                rooms: 4,
                 baths: 3,
                 availableRooms: 2,
                 availableFrom: 'Mid December',
-                features: ['Air-Conditioned', 'Free Laundry', 'Parking', 'Backyard with Gazebo'],
+                features: ['Free Laundry', 'Parking', 'Backyard with Gazebo', 'Near Nagarhole'],
                 link: 'property-2.html',
-                city: 'Campus Area',
+                city: 'Nagarhole',
                 image: 'assets/images/property-2/house-front/1.jpg'
             }
         ];
@@ -286,7 +272,7 @@
                             </div>
                             <div class="stat-item">
                                 <span class="stat-icon"><i class="fas fa-dollar-sign"></i></span>
-                                <span class="stat-text">From $${prop.sharedRent}/mo</span>
+                                <span class="stat-text">Starting ₹${prop.startingRent}/mo</span>
                             </div>
                         </div>
                         <div class="property-features-list">
